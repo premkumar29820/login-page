@@ -11,7 +11,7 @@ function Dashboard({ user, onLogout }) {
   return (
     <div className="min-h-screen bg-netflixBlack text-white">
       <header className="flex items-center justify-between px-6 py-4 md:px-12">
-        <h1 className="text-netflixRed text-2xl font-extrabold tracking-tight">LOGOFLIX</h1>
+        <h1 className="text-netflixRed text-2xl font-extrabold tracking-tight">CLONEFLIX</h1>
         <button
           onClick={handleLogout}
           className="rounded border border-gray-500 px-4 py-2 text-sm hover:bg-white/10"
