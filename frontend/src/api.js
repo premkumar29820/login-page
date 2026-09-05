@@ -1,13 +1,18 @@
-const response = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/login`,
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email,
-      password,
-    }),
-  }
-);
+
+import axios from "axios";
+
+const api = axios.create({
+  baseURL: "https://login-page-obqq.onrender.com",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
+
+export const loginUser = (email, password) => {
+  return api.post("/api/login", {
+    email,
+    password,
+  });
+};
+
+export default api;
